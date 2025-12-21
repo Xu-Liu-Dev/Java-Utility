@@ -1,0 +1,11 @@
+Id,FirstName,LastName,Age,Department,Salary,StartDate,Comment
+1,Tom,Anderson,32,IT,78000,2021-04-12,Senior backend engineer
+2,Alice,Wong,28,HR,52000,2022-01-05,Responsible for recruitment
+3,Michael,Smith,45,Finance,92000,2019-09-30,Expert in financial analysis
+4,Sara,Johnson,30,Marketing,61000,2023-03-15,Leads social media campaigns
+5,Ken,Tanaka,38,Operations,70000,2020-07-20,Oversees daily operations
+6,Emily,Clark,26,IT,56000,2024-02-01,Junior frontend developer
+7,David,Lee,41,Sales,85000,2018-11-10,Top performer in APAC region
+8,Yuki,Sato,29,Product,68000,2021-06-25,Works on product roadmap
+9,Robert,Brown,50,Management,120000,2017-05-18,Department director
+10,Hana,Kobayashi,33,QA,59000,2022-10-03,Ensures software quality
