@@ -1,7 +1,6 @@
 package libraries.csv;
 
-public class CsvFileWriterSample {
+public class CsvFileReader {
     public static void main(String[] args) {
-
     }
 }
