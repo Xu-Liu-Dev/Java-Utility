@@ -2,6 +2,23 @@ package libraries.csv;
 
 import java.io.*;
 
+/**
+ * CsvFileBasicReader
+ * <p>
+ * A basic utility class for reading CSV files. This class provides simple
+ * methods to load CSV content from a file path or input stream and parse
+ * each line into structured data.
+ *
+ * <p>Typical usage:
+ * <pre>
+ *     CsvFileBasicReader reader = new CsvFileBasicReader();
+ *     List<String[]> rows = reader.read("data.csv");
+ * </pre>
+ *
+ * @author Xu
+ * @version 1.0
+ * @since 2025-12-27
+ */
 public class CsvFileBasicReader {
     // CSV File Name
     private static String strCsvFIleName = "sample_csv_data.csv";
