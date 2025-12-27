@@ -25,6 +25,16 @@ public class CsvFileBasicReader {
     // Logger instance for recording application events, errors, and debugging information.
     private static final Logger log = LoggerFactory.getLogger(CsvFileBasicReader.class);
 
+    /**
+     * Reads the CSV file bundled in the application's classpath.
+     * <p>
+     * The method opens the CSV resource as an InputStream, wraps it in a BufferedReader,
+     * and iterates through each line. Each line is split using the predefined delimiter
+     * and can be further processed as needed by the caller.
+     * </p>
+     *
+     * @throws IOException if the CSV file cannot be accessed or an I/O error occurs during reading
+     */
     public void reader() throws IOException {
         // Lines read from the file
         String strLine;
