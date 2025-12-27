@@ -21,17 +21,19 @@ import java.io.*;
  */
 public class CsvFileBasicReader {
     // CSV File Name
-    private static String strCsvFIleName = "sample_csv_data.csv";
+    private static final String strCsvFIleName = "sample_csv_data.csv";
     // CSV delimiter
-    private static String strDelimiter = ",";
-    // Lines read from the file
-    private static String strLine;
+    private static final String strDelimiter = ",";
 
     public static void main(String[] args) {
+        // Lines read from the file
+        String strLine;
+
         // Load the CSV file from the classpath using the class loader.
         InputStream inputStream = CsvFileBasicReader.class
                 .getClassLoader()
                 .getResourceAsStream(strCsvFIleName);
+
         // Reads the CSV content line by line from the InputStream.
         // Each line is split into fields using the configured delimiter.
         try (BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(inputStream))) {
