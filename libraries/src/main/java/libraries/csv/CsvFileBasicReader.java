@@ -3,27 +3,35 @@ package libraries.csv;
 import java.io.*;
 
 public class CsvFileBasicReader {
-    public static void main(String[] args) {
-        String strCsvFIleName = "sample_csv_data.csv";
-        String strLine;
-        String strDelimiter = ",";
+    // CSV File Name
+    private static String strCsvFIleName = "sample_csv_data.csv";
+    // CSV delimiter
+    private static String strDelimiter = ",";
+    // Lines read from the file
+    private static String strLine;
 
+    public static void main(String[] args) {
+        // Load the CSV file from the classpath using the class loader.
         InputStream inputStream = CsvFileBasicReader.class
                 .getClassLoader()
                 .getResourceAsStream(strCsvFIleName);
-
+        // Reads the CSV content line by line from the InputStream.
+        // Each line is split into fields using the configured delimiter.
         try (BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(inputStream))) {
             while ((strLine = bufferedReader.readLine()) != null) {
                 String[] values = strLine.split(strDelimiter);
+                // Output each parsed field for debugging or inspection.
                 for (String value : values) {
-                    System.out.println(value + "|");
+                    System.out.print(value + "|");
                 }
                 System.out.println();
             }
-        } catch (FileNotFoundException e) {
-            throw new RuntimeException(e);
-        } catch (IOException e) {
-            throw new RuntimeException(e);
+        } catch (FileNotFoundException fileNotFoundException) {
+            // Wrap and rethrow the exception if the specified file does not exist.
+            throw new RuntimeException(fileNotFoundException);
+        } catch (IOException ioException) {
+            // Wrap and rethrow any I/O-related exceptions that occur during processing.
+            throw new RuntimeException(ioException);
         }
     }
 }
