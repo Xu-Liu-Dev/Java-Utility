@@ -1,5 +1,6 @@
 package libraries.csv;
 
+import libraries.constant.FileConstants;
 import libraries.model.EmployeeManagement;
 import lombok.extern.slf4j.XSlf4j;
 import org.apache.commons.csv.CSVFormat;
@@ -17,6 +18,7 @@ import java.util.List;
 
 /**
  * AdvancedCsvReader.java
+ *
  * <p>
  * Advanced CSV reader using Apache Commons CSV.
  * Supports header-based parsing, UTF-8 decoding, and mapping rows to Java objects.
@@ -26,10 +28,7 @@ import java.util.List;
  * @since 2025-12-28
  */
 @XSlf4j
-public class AdvancedCsvReader {
-
-    // CSV File Name
-    private static final String STR_CSV_FILE_NAME = "csv/sample_csv_data.csv";
+public class AdvancedCsvFileReader {
 
     /**
      * Reads the CSV file and maps each row to a Person object.
@@ -39,13 +38,13 @@ public class AdvancedCsvReader {
      */
     public List<EmployeeManagement> readCsv() throws IOException {
         // Load the CSV file from the classpath using the class loader.
-        InputStream inputStream = AdvancedCsvReader.class.getClassLoader().getResourceAsStream(STR_CSV_FILE_NAME);
+        InputStream inputStream = AdvancedCsvFileReader.class.getClassLoader().getResourceAsStream(FileConstants.CSV_INPUT_FILE_NAME);
         if (inputStream == null) {
-            log.error("CSV resource not found: {}", STR_CSV_FILE_NAME);
-            throw new IOException("CSV resource not found: " + STR_CSV_FILE_NAME);
+            log.error("CSV resource not found: {}", FileConstants.CSV_INPUT_FILE_NAME);
+            throw new IOException("CSV resource not found: " + FileConstants.CSV_INPUT_FILE_NAME);
         }
 
-        log.info("Reading CSV file: {}", STR_CSV_FILE_NAME);
+        log.info("Reading CSV file: {}", FileConstants.CSV_INPUT_FILE_NAME);
 
         // List of employee management records
         List<EmployeeManagement> employeeManagementsList = new ArrayList<>();
@@ -84,7 +83,7 @@ public class AdvancedCsvReader {
             });
         } catch (IOException ioException) {
             // Logs an error message with the file name and exception details when CSV reading fails
-            log.error("Error reading CSV file: {}", STR_CSV_FILE_NAME, ioException);
+            log.error("Error reading CSV file: {}", FileConstants.CSV_INPUT_FILE_NAME, ioException);
             throw ioException;
         }
 

@@ -1,16 +1,28 @@
 package libraries.model;
 
+import lombok.AllArgsConstructor;
+import lombok.Builder;
 import lombok.Data;
+import lombok.NoArgsConstructor;
 
 import java.math.BigDecimal;
 import java.time.LocalDate;
 
 /**
+ * EmployeeManagement.java
+ *
  * Handles employee-related operations such as creation, update, retrieval,
  * and deletion of employee records. This class serves as the central
  * management component for employee data within the system.
+ *
+ * @author Xu
+ * @version 1.0
+ * @since 2025-12-27
  */
 @Data
+@Builder
+@AllArgsConstructor
+@NoArgsConstructor
 public class EmployeeManagement {
 
     // Primary key representing the employee in the system.
@@ -37,4 +49,5 @@ public class EmployeeManagement {
 
     // Optional remarks or descriptive notes related to the employee.
     private String comment;
+
 }
