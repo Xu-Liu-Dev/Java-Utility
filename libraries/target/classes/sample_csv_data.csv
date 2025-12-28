@@ -1,4 +1,4 @@
-Id,FirstName,LastName,Age,Department,Salary,StartDate,Comment
+id,firstName,lastName,age,department,salary,startDate,comment
 1,Tom,Anderson,32,IT,78000,2021-04-12,Senior backend engineer
 2,Alice,Wong,28,HR,52000,2022-01-05,Responsible for recruitment
 3,Michael,Smith,45,Finance,92000,2019-09-30,Expert in financial analysis
