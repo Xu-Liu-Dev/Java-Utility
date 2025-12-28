@@ -29,7 +29,7 @@ import java.util.List;
 public class AdvancedCsvReader {
 
     // CSV File Name
-    private static final String STR_CSV_FILE_NAME = "sample_csv_data.csv";
+    private static final String STR_CSV_FILE_NAME = "csv/sample_csv_data.csv";
 
     /**
      * Reads the CSV file and maps each row to a Person object.

@@ -1,8 +1,6 @@
 package libraries.csv;
 
 import lombok.extern.slf4j.XSlf4j;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 
 import java.io.*;
 
@@ -20,7 +18,7 @@ import java.io.*;
 @XSlf4j
 public class BasicCsvFileReader {
     // CSV File Name
-    private static final String STR_CSV_FILE_NAME = "sample_csv_data.csv";
+    private static final String STR_CSV_FILE_NAME = "csv/sample_csv_data.csv";
     // CSV delimiter
     private static final String STR_DELIMITER = ",";
 
