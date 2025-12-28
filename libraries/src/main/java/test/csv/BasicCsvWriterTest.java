@@ -24,8 +24,6 @@ import java.util.List;
  */
 @XSlf4j
 public class BasicCsvWriterTest {
-    // CSV Output File Name
-//    private static final String CSV_OUTPUT_FILE_NAME = "/libraries/output/csv/sample_csv_data.csv";
 
     // Application entry point that initializes the CSV writer and triggers the CSV parsing process
     public static void main(String[] args) throws IOException {
